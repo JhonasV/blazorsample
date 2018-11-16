@@ -421,7 +421,7 @@
       ]
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
-      "sha512": "ab4+TZw3Sxqrr5TwrwVyABeQkhSxYMJXgG6yZw7T+r6Vz+hcOt+pK79o15ESG7kZvWAK9wRG7emnTIia5O6R1Q==",
+      "sha512": "sa/cztXesLyTgCiYuef0RK2EAImnak0w2wrjCh/YBTvbn4iV2eTy0q3F8CyUkGiaYEyxUKGVTko6+7SMRBL4Gg==",
       "type": "package",
       "path": "microsoft.aspnetcore.razor.design/2.1.2",
       "files": [
@@ -644,23 +644,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nveras.TECHCOMMRD\\.nuget\\packages\\": {},
+    "C:\\Users\\jhonas\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nveras.TECHCOMMRD\\Desktop\\bltest\\blazorsample\\blazorsample.csproj",
+      "projectUniqueName": "C:\\Users\\jhonas\\Desktop\\blazorsample\\blazorsample.csproj",
       "projectName": "blazorsample",
-      "projectPath": "C:\\Users\\nveras.TECHCOMMRD\\Desktop\\bltest\\blazorsample\\blazorsample.csproj",
-      "packagesPath": "C:\\Users\\nveras.TECHCOMMRD\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nveras.TECHCOMMRD\\Desktop\\bltest\\blazorsample\\obj\\",
+      "projectPath": "C:\\Users\\jhonas\\Desktop\\blazorsample\\blazorsample.csproj",
+      "packagesPath": "C:\\Users\\jhonas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jhonas\\Desktop\\blazorsample\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\nveras.TECHCOMMRD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jhonas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

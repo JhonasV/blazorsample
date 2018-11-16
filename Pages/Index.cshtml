@@ -1,7 +1,91 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<h1>Move it!</h1>
 
-Welcome to your new app.
+    <div class="row row-style">
+        <div class="col-lg-5">
+           <div class="title-container"><h3>Izquierda</h3></div>           
+          <div class="item-box">
+              @{
+                  foreach(var item in items){
+                      if(item.Position == 0){
+                          if(newPosition.Contains(item)){
+                            <input class="form-control item-selected-p0" onclick=@((e) => onItemClickHandler(item)) id="@item.Id"  type="button" readonly value="@item.Name"/>
+                          }else{
+                            <input class="form-control item" onclick=@((e) => onItemClickHandler(item)) id="@item.Id"  type="button" readonly value="@item.Name"/>
+                        }
+                      }
+                  }
+              }
+          </div>
+        </div>
+        <div class="col-lg-2 controls">
+            <button onclick="@toRightClickHandler" class="btn btn-primary btn-lg">></button>
+            <button onclick="@toLeftClickHandler" class="btn btn-primary btn-lg"><</button>
+        </div>
+        <div class="col-lg-5">
+          <div class="title-container"><h3>Derecha</h3></div>        
+          <div class="item-box">
+                @{
+                  foreach(var item in items){
+                      if(item.Position == 1){
+                          if(newPosition.Contains(item)){
+                            <input class="form-control item-selected-p0" onclick=@((e) => onItemClickHandler(item)) id="@item.Id"  type="button" readonly value="@item.Name"/>
+                          }else{
+                            <input class="form-control item" onclick=@((e) => onItemClickHandler(item)) id="@item.Id"  type="button" readonly value="@item.Name"/>
+                        }
+                      }
+                  }
+              }
+          </div>
+        </div>
+    </div>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@functions {
+    List<Items> items = new List<Items>();
+    List<Items> newPosition = new List<Items>();
+ 
+    
+    protected override void OnInit(){
+        filler();
+    }
+    
+    void filler()
+    {
+        items.Add(new Items{ Id = 1, Name = "Eggs", Position = 0});
+        items.Add( new Items{Id = 2, Name = "Bread", Position = 0}); 
+    }
+    
+
+    void onItemClickHandler(Items e) {
+        var item = newPosition.Contains(e);
+        if(item) { newPosition.Remove(e);} else { newPosition.Add(e);}  
+    }
+
+    void toRightClickHandler(){
+        foreach (var move in newPosition)
+        {
+            foreach(var move2 in items){
+                if(move.Id == move2.Id && move.Position == 0){
+                    move.Position = 1;
+                }
+            }
+        }
+    }
+     void toLeftClickHandler(){
+        foreach (var move in newPosition)
+        {
+            foreach(var move2 in items){
+                if(move.Id == move2.Id && move.Position == 1){
+                    move.Position = 0;
+                }
+            }
+        }
+    }
+    class Items
+    {
+        public int Id { get; set; }
+        public String Name { get; set; }
+        public int Position { get; set; }
+    }
+}
